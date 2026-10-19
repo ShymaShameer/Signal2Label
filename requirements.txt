@@ -1,0 +1,43 @@
+# --- Data & database ---
+duckdb
+pandas
+numpy
+pyarrow            # Parquet read/write for saved results
+
+# --- Statistics & time series ---
+scipy
+statsmodels
+pymannkendall      # Mann-Kendall trend test
+
+# --- Machine learning ---
+scikit-learn       # Isolation Forest, PCA, hierarchical clustering
+
+# --- Visualization ---
+matplotlib
+seaborn
+plotly
+
+# --- App ---
+streamlit
+
+# --- RAG / LLM assistant ---
+chromadb
+anthropic          # or openai, depending on your LLM provider
+requests
+beautifulsoup4     # parsing DailyMed / FDA pages
+lxml               # parsing DailyMed SPL XML
+python-dotenv      # loads API keys from a .env file
+
+# --- Notebooks & testing ---
+jupyter
+ipykernel
+pytest
+
+# --- Optional (uncomment if you get to them) ---
+# ruptures         # change-point detection
+# xgboost          # supervised early-warning model
+# shap             # model explanations
+# umap-learn       # UMAP visualization
+# hdbscan          # density-based clustering
+# fastapi
+# uvicorn

@@ -1,0 +1,21 @@
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python & Jupyter cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data files (if too large for Git)
+data/
+*.csv
+*.parquet
+*.sqlite
+*.db
+
+# OS / IDE
+.DS_Store
+.vscode/
