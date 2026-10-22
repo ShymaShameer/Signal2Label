@@ -32,6 +32,7 @@ python-dotenv      # loads API keys from a .env file
 jupyter
 ipykernel
 pytest
+ruff
 
 # --- Optional (uncomment if you get to them) ---
 # ruptures         # change-point detection
