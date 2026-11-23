@@ -3,6 +3,7 @@
 env/
 venv/
 ENV/
+*.wal
 
 # Python & Jupyter cache
 __pycache__/
