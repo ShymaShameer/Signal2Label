@@ -79,24 +79,43 @@ The project follows three main stages:
 - 613 signals classified as strong signals.
 - Known safety findings, including genital infections, ketoacidosis, Fournier's gangrene, and pancreatitis, were recovered.
 
-### 3. Verify – Regulatory Verification with an AI Assistant
+### 3. Verify – Historical Regulatory Verification Using RAG
 
-**Tools:** Streamlit, Retrieval-Augmented Generation (RAG), FDA drug labeling documents
+**Tools:** Python, Streamlit, Retrieval-Augmented Generation (RAG), LLMs, FDA USPI documents
 
-The regulatory verification component connects prioritized safety signals with official FDA drug labeling information.
+The regulatory verification component connects prioritized FAERS safety signals with official FDA drug labeling information.
 
-The assistant is designed to answer questions about drug–adverse event associations by retrieving relevant information from FDA labeling documents.
+This component was developed in two stages:
 
-Its purpose is to help investigate:
+**Stage 1: Standalone RAG Drug Information Assistant**
 
-- Whether an adverse event is already mentioned in the official drug label.
-- When the warning or adverse event information was added.
-- Which official document supports the answer.
+I initially developed a standalone RAG-based Drug Safety Assistant using the latest available FDA labeling documents for the seven selected medicines.
 
-The system uses retrieved regulatory documents to provide evidence-based responses with source references and dates.
+The application was hosted online as a separate GitHub project:
 
-**Outcome:** Among the top 33 SGLT2 watch-list signals, 23 were already present in the FDA labels.
+**[Anti-diabetic Drug Safety RAG Assistant](https://github.com/ShymaShameer/Anti-diabetic-Drug_Safety_RAG_Assistant)**
 
+The standalone application included three interactive features:
+
+- **Similarity Top-K Selection:** Adjust the number of relevant document chunks retrieved for a query.
+- **System Prompt Presets:** Select different system prompt configurations to guide the assistant's responses.
+- **New Chat:** Start a fresh conversation.
+
+**Stage 2: Historical RAG Integration in Signal2Label**
+
+For the final project, I reused the RAG architecture locally and extended it to support historical regulatory verification.
+
+Instead of relying only on the latest drug labels, the extended system uses complete USPI (United States Prescribing Information) documents dating back to 2013.
+
+Additional functionality includes:
+
+- **Drug Selection:** Select a specific medicine for regulatory investigation.
+- **Year Selection:** Retrieve information from the selected labeling year.
+- **Year Comparison:** Compare FDA labeling information across different years to investigate when adverse events, warnings, or other safety information appeared or changed.
+
+This extension allows the assistant to investigate whether a detected FAERS signal was already documented in the official drug label or whether the relevant safety information appeared in a later labeling update.
+
+![alt text](image.png)
 ---
 
 ## Key Results
@@ -130,15 +149,17 @@ An important finding was that gradual reporting patterns can be easier to identi
 
 ### Regulatory Verification
 
-Among the top 33 prioritized SGLT2 signals:
-
+Among the top 33 prioritized SGLT2 watch-list signals:
 - 23 were already present in the FDA labels.
 - 5 were added in 2018.
 - 2 were added in 2019.
 - 1 was added in 2017.
 - 2 had few reports.
 
-This demonstrates how statistical signal prioritization can be connected to regulatory evidence for further investigation.
+The assistant provides retrieved regulatory evidence with source references and dates to support further investigation.
+
+**The objective is to connect statistical signal detection with historical regulatory evidence, not to automate medical or regulatory decisions.**
+
 
 ---
 
