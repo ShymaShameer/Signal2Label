@@ -115,7 +115,7 @@ Additional functionality includes:
 
 This extension allows the assistant to investigate whether a detected FAERS signal was already documented in the official drug label or whether the relevant safety information appeared in a later labeling update.
 
-![alt text](<img width="2912" height="1470" alt="image" src="https://github.com/user-attachments/assets/47576174-af1c-42e0-8b8c-128b05c049de" />)
+<img width="2912" height="1470" alt="image" src="https://github.com/user-attachments/assets/42d39e5a-4751-4347-8205-8771cc12f9d1" />
 ---
 
 ## Key Results
