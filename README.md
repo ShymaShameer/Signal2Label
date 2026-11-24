@@ -101,7 +101,7 @@ The standalone application included three interactive features:
 - **System Prompt Presets:** Select different system prompt configurations to guide the assistant's responses.
 - **New Chat:** Start a fresh conversation.
 
-**Stage 2: Historical RAG Integration in Signal2Label**
+**Stage 2: [Drug Information Assistant](https://github.com/ShymaShameer/Drug-Information-Assistant)Historical RAG Integration in Signal2Label**
 
 For the final project, I reused the RAG architecture locally and extended it to support historical regulatory verification.
 
